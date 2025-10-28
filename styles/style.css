@@ -133,3 +133,12 @@ footer {
   margin-top: 3rem;
   font-size: 0.9rem;
 }
+/* ===== Headings ===== */
+h2 {
+  color: #7B3BA8; /* nice bright \ */
+  font-family: "Poppins", "Segoe UI", Roboto, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.6em;
+}
+ 
