@@ -3,28 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NewCom Shop</title>
-  <link rel="stylesheet" href="../styles/style.css" />
+  <title>NewCom | Welcome</title>
+  <link rel="stylesheet" href="./styles/style.css" />
 </head>
 <body>
-  <div id="header"></div>
+  <header>
+    <h1>Welcome to NewCom</h1>
+    <nav>
+      <a href="./pages/about.html">About</a>
+      <a href="./pages/contact.html">Contact</a>
+    </nav>
+  </header>
 
   <main>
-    <section class="hero">
-      <h2>Discover Quality & Style</h2>
-      <p>Explore trending products handpicked for you.</p>
+    <section>
+      <h2>Discover Our Collection</h2>
+      <p>High-quality fashion and accessories designed for you.</p>
+      <a href="./pages/index.html" class="btn">Browse Products</a>
     </section>
-
-    <section class="product-grid" id="product-grid"></section>
   </main>
 
-  <div id="footer"></div>
-
-  <script src="../scripts/main.js"></script>
-  <script>
-    includeComponent("header", "../core/header.html");
-    includeComponent("footer", "../core/footer.html");
-    loadProducts();
-  </script>
+  <footer>
+    <p>&copy; 2025 NewCom. All rights reserved.</p>
+  </footer>
 </body>
 </html>
