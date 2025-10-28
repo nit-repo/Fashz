@@ -1,0 +1,135 @@
+/* ===== Global Styles ===== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ===== Layout ===== */
+header, footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* ===== Navigation ===== */
+nav a {
+  color: #fff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: url('https://via.placeholder.com/1200x400?text=Hero+Banner') no-repeat center/cover;
+  color: #fff;
+  padding: 4rem 2rem;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ===== Product Grid ===== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.product-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.product-price {
+  font-weight: bold;
+  color: #007BFF;
+  margin-bottom: 0.75rem;
+}
+
+.product-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.product-link:hover {
+  background-color: #0056b3;
+}
+/* ===== Product Detail Page ===== */
+.detail-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.detail-card img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.detail-card h2 {
+  margin-top: 0;
+}
+
+.detail-card strong {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #0078d4;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}

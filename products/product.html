@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Details</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <div id="product-detail" class="product-detail"></div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="../scripts/main.js"></script>
+  <script>
+    async function loadProductDetail() {
+      // Get product ID from URL (e.g., ?id=jacket)
+      const params = new URLSearchParams(window.location.search);
+      const productId = params.get("id");
+
+      if (!productId) {
+        document.getElementById("product-detail").innerHTML =
+          "<p>Product not found.</p>";
+        return;
+      }
+
+      // Fetch products and find the one with the matching ID
+      const res = await fetch("../data/products.json");
+      const products = await res.json();
+      const product = products.find((p) => p.id === productId);
+
+      if (!product) {
+        document.getElementById("product-detail").innerHTML =
+          "<p>Product not found.</p>";
+        return;
+      }
+
+      // Render product detail
+      document.getElementById("product-detail").innerHTML = `
+        <div class="product-card">
+          <img src="${product.image}" alt="${product.title}" />
+          <h2>${product.title}</h2>
+          <p class="price">$${product.price}</p>
+          <p>${product.description}</p>
+          <a href="../pages/index.html" class="back-link">← Back to Products</a>
+        </div>
+      `;
+    }
+
+    document.addEventListener("DOMContentLoaded", loadProductDetail);
+  </script>
+</body>
+</html>

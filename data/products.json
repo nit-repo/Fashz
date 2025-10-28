@@ -1,0 +1,37 @@
+[
+  {
+    "id": "jacket",
+    "title": "Red Leather Jacket",
+    "price": 85,
+    "image": "https://via.placeholder.com/230x230?text=Jacket",
+    "description": "A premium red leather jacket perfect for cool evenings and casual wear."
+  },
+  {
+    "id": "shoes",
+    "title": "Black Running Shoes",
+    "price": 70,
+    "image": "https://via.placeholder.com/230x230?text=Shoes",
+    "description": "Lightweight and comfortable shoes designed for long-distance runs."
+  },
+  {
+    "id": "bag",
+    "title": "Brown Leather Bag",
+    "price": 60,
+    "image": "https://via.placeholder.com/230x230?text=Bag",
+    "description": "Stylish leather bag with multiple compartments for work or travel."
+  },
+  {
+    "id": "watch",
+    "title": "Smartwatch X2",
+    "price": 120,
+    "image": "https://via.placeholder.com/230x230?text=Watch",
+    "description": "Next-gen smartwatch with fitness tracking and customizable faces."
+  },
+  {
+    "id": "glasses",
+    "title": "Retro Sunglasses",
+    "price": 45,
+    "image": "https://via.placeholder.com/230x230?text=Glasses",
+    "description": "Vintage-style sunglasses with UV protection and durable lenses."
+  }
+]
