@@ -1,0 +1,52 @@
+NEWCOMSHOP/
+│
+├── assets/
+│   ├── images/
+│   └── icons/
+│
+├── components/                   # Reusable UI parts
+│   ├── logo.html
+│   ├── button.html
+│   ├── hero.html
+│   ├── nav.html
+│   ├── header.html
+│   ├── footer.html
+│   ├── product-card.html
+│   ├── section-title.html
+│   └── instagram-section.html
+│
+├── data/
+│   └── products.json
+│
+├── layouts/                      # Reusable HTML skeletons
+│   └── base.html                 # <head>, fonts, main wrapper, etc.
+│
+├── pages/
+│   ├── index.html
+│   ├── about.html
+│   ├── contact.html
+│   └── product.html
+│
+├── products/
+│   └── product-detail.html
+│
+├── scripts/
+│   ├── main.js                   # Main logic (load components dynamically)
+│   ├── render-products.js
+│   ├── include.js                # Utility for HTML partial includes
+│   └── utils/
+│       └── helpers.js
+│
+├── styles/
+│   ├── styles.css
+│   ├── components/
+│   │   ├── header.css
+│   │   ├── hero.css
+│   │   ├── product-card.css
+│   │   └── footer.css
+│   └── utils/
+│       ├── variables.css
+│       ├── typography.css
+│       └── layout.css
+│
+└── index.html                    # Root entry point

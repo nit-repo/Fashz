@@ -1,30 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NewCom Shop</title>
-  <link rel="stylesheet" href="../styles/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fashz — Modern Fashion Store</title>
+  <!-- Brand-accurate fonts: closest web-safe/GFonts match included.
+       If you want exact custom font files from the PDF, upload them and I'll swap them in. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css" />
 </head>
 <body>
-  <div id="header"></div>
+  <div class="site">
+     <div id="header"></div>
 
   <main>
-    <section class="hero">
-      <h2>Discover Quality & Style</h2>
-      <p>Explore trending products handpicked for you.</p>
-    </section>
+      <main>
+  <div id="hero"></div>
+      </main>
 
-    <section class="product-grid" id="product-grid"></section>
-  </main>
 
-  <div id="footer"></div>
+      <section class="products">
+        <div class="section-title">
+          <div>
+            <h2>All Products</h2>
+            <div class="muted small">Explore everything from the latest drops</div>
+          </div>
+          <div class="muted small" id="product-count">Loading...</div>
+        </div>
 
-  <script src="../scripts/main.js"></script>
-  <script>
-    includeComponent("header", "../core/header.html");
-    includeComponent("footer", "../core/footer.html");
-    loadProducts();
-  </script>
+        <div class="grid" id="product-grid"></div>
+        <!-- Instagram Section -->
+
+  <div class="insta-content">
+    <h2>Follow us on Instagram</h2>
+    <a href="#" class="btn insta-btn">Follow @fashz</a>
+  </div>
+
+      </section>
+      
+    </main>
+
+
+    <footer>
+      <div>
+        <div class="brand-name">Fashz</div>
+        <div class="muted small">© Fashz 2025 — Crafted with care</div>
+      </div>
+      <div class="muted small">Help • Shipping • Returns • Privacy</div>
+    </footer>
+  </div>
 </body>
+<!-- Load JS at the very end -->
+  <script src="/scripts/main.js"></script>
 </html>
