@@ -1,51 +1,51 @@
-// scripts/main.js
+// main.js
+const COMPONENTS = {
+  header: "/core/header.html",
+  footer: "/core/footer.html",
+  hero: "/core/hero.html",
+  productsTitle: "/core/products-title.html",
+  productList: "/core/product-list.html"
+};
 
-// Reusable component loader
-async function includeComponent(targetId, file) {
-  const el = document.getElementById(targetId);
-  if (!el) return;
+async function loadComponent(selector, path) {
   try {
-    const res = await fetch(file);
-    if (!res.ok) throw new Error(`Failed to load ${file}`);
-    el.innerHTML = await res.text();
-  } catch (err) {
-    console.error(err);
+    const response = await fetch(path);
+    if (!response.ok) throw new Error(`HTTP ${response.status} - ${path}`);
+    const html = await response.text();
+    const el = document.querySelector(selector);
+    if (el) el.innerHTML = html;
+  } catch (error) {
+    console.error(`Error loading ${path}:`, error);
   }
 }
 
-// Load product data dynamically
-async function loadProducts() {
-  const grid = document.getElementById("product-grid");
-  if (!grid) return; // safety check
-
+async function loadProducts(jsonPath) {
   try {
-    const res = await fetch("../data/products.json");
-    const products = await res.json();
+    const response = await fetch(jsonPath);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const products = await response.json();
+    const grid = document.querySelector("#product-grid");
+    if (!grid) return;
 
     grid.innerHTML = products
       .map(
-        (p) => `
-        <div class="product-card">
-          <img src="${p.image}" alt="${p.title}" class="product-image" />
-          <h3 class="product-title">${p.title}</h3>
-          <p class="product-price">$${p.price}</p>
-          <a href="../products/product.html?id=${p.id}" class="product-link">View Details</a>
-
-        </div>
+        p => `
+        <article class="card">
+          <div class="img"><img src="${p.image}" alt="${p.name}" /></div>
+          <h3>${p.name}</h3>
+          <div class="muted small">${p.variant}</div>
+          <div class="price-row">
+            <div class="price">${p.price}</div>
+            <button class="pill ghost">+ Add</button>
+          </div>
+        </article>
       `
       )
       .join("");
-  } catch (err) {
-    console.error("Error loading products:", err);
+
+    const count = document.querySelector(".section-title .muted.small:last-child");
+    if (count) count.textContent = `Showing ${products.length} items`;
+  } catch (error) {
+    console.error("Error loading products:", error);
   }
 }
-
-// Initialize page
-document.addEventListener("DOMContentLoaded", async () => {
-  // Example: Load header/footer components
-  await includeComponent("header", "../core/header.html");
-  await includeComponent("footer", "../core/footer.html");
-
-  // Load products if product grid exists
-  loadProducts();
-});

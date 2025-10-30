@@ -1,6 +1,11 @@
-<div class="product-card">
-  <img src="../images/sample-product.jpg" alt="Product Name" class="product-image" />
-  <h3 class="product-title">Product Name</h3>
-  <p class="product-price">$99.00</p>
-  <a href="../products/product.html" class="product-link">View Details</a>
-</div>
+<article class="card">
+  <div class="img">
+    <img src="{{image}}" alt="{{name}}" />
+  </div>
+  <h3>{{name}}</h3>
+  <div class="muted small">{{sizes}}</div>
+  <div class="price-row">
+    <div class="price">₹{{price}}</div>
+    <button class="pill ghost">+ Add</button>
+  </div>
+</article>
