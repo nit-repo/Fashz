@@ -74,9 +74,9 @@ nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
 .small{font-size:13px}
 
 /* Footer */
-footer{margin-top:40px;padding:28px;border-radius:14px;background:linear-gradient(180deg,#fff,#f8fafc);display:flex;justify-content:space-between;align-items:center}
-
-/* Ghost pill (add button) */
+footer{margin-top:40px;padding:28px;border-radius:14px;background:linear-gradient(180deg,#f1c5cf,#cb97a0);display:flex;justify-content:space-between;align-items:center}
+footer.p1{color: #fbfbfd;}
+/* Ghost pill (add button) */ 
 .pill.ghost{border:none;background:transparent;padding:6px 10px;font-weight:700;cursor:pointer}
 
 /* Responsive */

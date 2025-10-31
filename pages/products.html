@@ -6,16 +6,7 @@
   <title>Fashz — Home</title>
   <link rel="stylesheet" href="/styles/style.css" />
   <script src="/scripts/main.js" defer></script>
-  <script defer>
-    document.addEventListener("DOMContentLoaded", async () => {
-      await loadComponent("#header", "/core/header.html");
-      await loadComponent("#footer", "/core/footer.html");
-      await loadComponent("#hero", "/core/hero.html");
-      await loadComponent("#products-title", "/core/products-title.html");
-      await loadComponent("#product-list", "/core/product-list.html");
-      loadProducts("/data/products.json");
-    });
-  </script>
+
 </head>
 <body>
   <div class="site">
